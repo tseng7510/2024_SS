@@ -1,0 +1,271 @@
+.brochure .content {
+  position: relative;
+}
+.brochure .listBox .box {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1400px) {
+  .brochure .listBox .box {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box {
+    flex-direction: column;
+    height: auto;
+    padding-top: 30px;
+  }
+}
+.brochure .listBox .box .infoBox {
+  width: 35%;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .brochure .listBox .box .infoBox {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box .infoBox {
+    width: 100%;
+  }
+}
+.brochure .listBox .box .info {
+  color: #FFF;
+  background: #1F56A6;
+  padding: 50px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 520px;
+}
+@media screen and (max-width: 1400px) {
+  .brochure .listBox .box .info {
+    min-height: 420px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box .info {
+    min-height: auto;
+  }
+}
+.brochure .listBox .box .info::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  aspect-ratio: 1;
+  display: block;
+  z-index: -1;
+  left: -40%;
+  top: -40%;
+  border-radius: 100%;
+  background: radial-gradient(ellipse at center, rgb(1, 160, 233) 0%, rgba(1, 160, 233, 0) 70%);
+  animation: blueShowMore 10s ease-in-out infinite;
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box .info::before {
+    width: 90%;
+    top: -50%;
+  }
+}
+@keyframes blueShowMore {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(100px) translateY(-80px);
+  }
+  50% {
+    transform: translateX(50px) translateY(-50px);
+  }
+  75% {
+    transform: translateX(-50px) translateY(0px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.brochure .listBox .box .info::after {
+  content: "";
+  position: absolute;
+  background: url(../images/index/oem_blue.svg) center no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  right: -50%;
+  bottom: -30%;
+  z-index: -1;
+  animation: scaleA 15s linear infinite;
+  opacity: 0.5;
+}
+.brochure .listBox .box .info .title {
+  font-size: 4.3125rem;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1400px) {
+  .brochure .listBox .box .info .title {
+    font-size: 3.4375rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .brochure .listBox .box .info .title {
+    font-size: 2.5625rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .brochure .listBox .box .info .title {
+    font-size: 1.6875rem;
+  }
+}
+.brochure .listBox .box .info .description {
+  border-top: #DCDDDD 2px solid;
+  padding-top: 30px;
+  margin: 20px 0 0;
+  position: relative;
+}
+.brochure .listBox .box .info .description::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #01A0E9;
+  top: -2px;
+  display: block;
+}
+.brochure .listBox .box .more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.7;
+  z-index: 9;
+  max-width: 210px;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  font-weight: 600;
+  position: absolute;
+  overflow: hidden;
+  padding: 10px 20px;
+  color: #FFF;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  border: none;
+  white-space: nowrap;
+  background: linear-gradient(to right, rgb(234, 100, 25) 0%, rgb(233, 190, 91) 100%);
+  top: 0;
+  transform: translateY(-50%);
+  left: 50px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .brochure .listBox .box .more {
+    font-size: 13px;
+    max-width: 160px;
+    height: 40px;
+  }
+}
+.brochure .listBox .box .more::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  display: block;
+  margin: 0 10px 0 0;
+  -webkit-mask: url("../images/icon/icon_download2.svg") center no-repeat;
+          mask: url("../images/icon/icon_download2.svg") center no-repeat;
+  background: white;
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box .more::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+.brochure .listBox .box .more::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background: #004080;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.brochure .listBox .box .more:hover {
+  color: #fff;
+}
+.brochure .listBox .box .more:hover::after {
+  width: 100%;
+  left: 0;
+}
+.brochure .listBox .box .picBox {
+  width: 65%;
+}
+@media screen and (max-width: 1000px) {
+  .brochure .listBox .box .picBox {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochure .listBox .box .picBox {
+    width: 100%;
+    order: -1;
+  }
+}
+.brochure .control {
+  width: 35%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: calc(50% + 260px + 20px);
+}
+@media screen and (max-width: 1480px) {
+  .brochure .control {
+    top: calc(50% + 210px + 20px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochure .control {
+    width: 100%;
+    top: 0;
+  }
+}
+.brochure .control::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #13315F;
+  display: block;
+}
+.brochure .control .slick-prev,
+.brochure .control .slick-next {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #13315F;
+  background: none;
+  margin: 0 20px;
+}
+.brochure .control .slick-prev::before,
+.brochure .control .slick-next::before {
+  content: "";
+  width: 5px;
+  height: 11px;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_arrow.svg") no-repeat;
+          mask: url("../images/icon/icon_arrow.svg") no-repeat;
+  background: #13315F;
+  margin: 0 10px 0 0;
+}
+.brochure .control .slick-next {
+  justify-content: flex-end;
+}
+.brochure .control .slick-next::before {
+  order: 2;
+  transform: scaleX(-1);
+  margin: 0 0 0 10px;
+}/*# sourceMappingURL=brochure.css.map */

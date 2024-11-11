@@ -1,0 +1,158 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.contact {
+  --padding: 50px;
+
+  @include screen('tablet') {
+    --padding: 40px;
+  }
+
+  @include screen('mobile') {
+    --padding: 30px;
+  }
+
+  .pageContent {
+    padding-bottom: 0 !important;
+
+    .container {
+      margin-bottom: 5%;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 30px;
+
+    @include screen('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .infoBox {
+    flex: 1 1 38%;
+    background: #FFF;
+    border: #E5E5E5 1px solid;
+    padding: var(--padding) var(--padding);
+
+    @include screen('tablet') {
+      flex: 1 1 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .formBox {
+    flex: 1 1 62%;
+    background: #FFF;
+    border: #E5E5E5 1px solid;
+    padding: var(--padding) var(--padding);
+
+    @include screen('tablet') {
+      flex: 1 1 100%;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: Rem(21);
+    margin-bottom: 30px;
+
+    @include screen('tablet') {
+      font-size: Rem(24);
+      margin-bottom: 20px;
+    }
+
+    @include screen('mobile') {
+      font-size: Rem(20);
+    }
+  }
+
+  .description {
+    margin-bottom: 30px;
+    color: #666666;
+    font-size: Rem(18);
+  }
+
+  .infoBox {
+    ul {
+      max-width: 380px;
+
+      li {
+        font-size: Rem(18);
+
+        & + li {
+          margin-top: 20px;
+
+          @include screen('tablet') {
+            margin-top: 20px;
+          }
+        }
+
+        .label {
+          color: #01A0E9;
+          font-weight: bold;
+          width: 75px;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .formBox {
+    .info {
+      color: #111111;
+      font-size: Rem(21);
+      margin-bottom: 5%;
+      font-weight: 500;
+
+      @include screen('tablet') {
+        font-size: Rem(18);
+      }
+
+      @include screen('mobile') {
+        font-size: Rem(16);
+      }
+    }
+  }
+
+  .pageBtnBox {
+    padding: 0;
+    border: none;
+  }
+}
+
+.okPage {
+  .mainBox {
+    padding: 10% 0;
+  }
+
+  .unitTitleBox .title {
+    text-align: center;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .subTitle {
+    text-align: center;
+    color: #279CF2;
+    font-size: Rem(28);
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @include screen('tablet') {
+      font-size: Rem(14);
+    }
+
+    @include screen('mobile') {
+      font-size: Rem(20);
+    }
+  }
+
+  .info {
+    text-align: center;
+    font-size: Rem(18);
+  }
+}

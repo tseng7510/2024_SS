@@ -1,0 +1,284 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.brochure {
+  .content {
+    position: relative;
+  }
+
+  .listBox {
+    .box {
+      display: flex;
+      align-items: center;
+
+      @include screenWidth('1400') {
+        height: 500px;
+      }
+
+      @include screen('mobile') {
+        flex-direction: column;
+        height: auto;
+        padding-top: 30px;
+      }
+
+      .infoBox {
+        width: 35%;
+        position: relative;
+
+        @include screen('tablet') {
+          width: 50%;
+        }
+
+        @include screen('mobile') {
+          width: 100%;
+        }
+      }
+
+      .info {
+        color: #FFF;
+        background: #1F56A6;
+        padding: 50px;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        min-height: 520px;
+
+        @include screenWidth('1400') {
+          min-height: 420px;
+        }
+
+        @include screen('mobile') {
+          min-height: auto;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 120%;
+          aspect-ratio: 1;
+          display: block;
+          z-index: -1;
+          left: -40%;
+          top: -40%;
+          border-radius: 100%;
+          background: radial-gradient(ellipse at center, rgba(1, 160, 233, 1) 0%, rgba(1, 160, 233, 0) 70%);
+          animation: blueShowMore 10s ease-in-out infinite;
+
+          @include screen('mobile') {
+            width: 90%;
+            top: -50%;
+          }
+        }
+
+        @keyframes blueShowMore {
+          0% {
+            transform: translateX(0) translateY(0);
+          }
+
+          25% {
+            transform: translateX(100px) translateY(-80px);
+          }
+
+          50% {
+            transform: translateX(50px) translateY(-50px);
+          }
+
+          75% {
+            transform: translateX(-50px) translateY(-0px);
+          }
+
+          100% {
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background: url(../images/index/oem_blue.svg) center no-repeat;
+          background-size: contain;
+          width: 100%;
+          height: 100%;
+          right: -50%;
+          bottom: -30%;
+          z-index: -1;
+          animation: scaleA 15s linear infinite;
+          opacity: .5;
+        }
+
+        .title {
+          font-size: Rem(69);
+          line-height: 1.2;
+
+          @include screenWidth('1400') {
+            font-size: Rem(55);
+          }
+
+          @include screenWidth('1200') {
+            font-size: Rem(41);
+          }
+
+          @include screen('tablet') {
+            font-size: Rem(27);
+          }
+        }
+
+        .description {
+          border-top: #DCDDDD 2px solid;
+          padding-top: 30px;
+          margin: 20px 0 0;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #01A0E9;
+            top: -2px;
+            display: block;
+          }
+        }
+      }
+
+      .more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0.7;
+        z-index: 9;
+        max-width: 210px;
+        font-size: Rem(18);
+        border-radius: 50px;
+        font-weight: 600;
+        position: absolute;
+        overflow: hidden;
+        padding: 10px 20px;
+        color: #FFF;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+        border: none;
+        white-space: nowrap;
+        background: linear-gradient(to right, rgba(234, 100, 25, 1) 0%, rgba(233, 190, 91, 1) 100%);
+        top: 0;
+        transform: translateY(-50%);
+        left: 50px;
+        @include transition(all, 0.3);
+
+        @include screen('tablet') {
+          font-size: 13px;
+          max-width: 160px;
+          height: 40px;
+        }
+
+        &::before {
+          content: '';
+          width: 35px;
+          height: 35px;
+          display: block;
+          margin: 0 10px 0 0;
+          mask: url('../images/icon/icon_download2.svg') center no-repeat;
+          background: #FFFF;
+
+          @include screen('mobile') {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: block;
+          background: $mainColor;
+          z-index: -1;
+          @include transition(all, 0.3);
+        }
+
+        &:hover {
+          color: #fff;
+
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
+      .picBox {
+        width: 65%;
+
+        @include screen('tablet') {
+          width: 50%;
+        }
+
+        @include screen('mobile') {
+          width: 100%;
+          order: -1;
+        }
+      }
+    }
+  }
+
+  .control {
+    width: 35%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: calc(50% + 520px / 2 + 20px);
+
+    @include screenWidth('1480') {
+      top: calc(50% + 420px / 2 + 20px);
+    }
+
+    @include screen('mobile') {
+      width: 100%;
+      top: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #13315F;
+      display: block;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: flex;
+      align-items: center;
+      font-size: Rem(16);
+      font-weight: bold;
+      color: #13315F;
+      background: none;
+      margin: 0 20px;
+
+      &::before {
+        content: '';
+        width: 5px;
+        height: 11px;
+        display: block;
+        mask: url('../images/icon/icon_arrow.svg') no-repeat;
+        background: #13315F;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .slick-next {
+      justify-content: flex-end;
+
+      &::before {
+        order: 2;
+        transform: scaleX(-1);
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}

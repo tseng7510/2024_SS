@@ -1,0 +1,92 @@
+.faq .listBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq .item {
+  background: transparent;
+  border: #DCDDDD 2px solid;
+  transition: all 0.3s ease;
+}
+.faq .item .qBox {
+  color: #111111;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 40px 40px 40px 130px;
+  line-height: 1.65;
+  text-align: left;
+  display: block;
+  background: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .faq .item .qBox {
+    padding: 20px 20px 20px 60px;
+    font-size: 1.375rem;
+    line-height: 1.4;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .item .qBox {
+    font-size: 1.25rem;
+  }
+}
+.faq .item .qBox::before {
+  content: "";
+  width: 20px;
+  height: 4px;
+  display: block;
+  background: #01A0E9;
+  position: absolute;
+  top: 62px;
+  left: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .faq .item .qBox::before {
+    top: 34px;
+    left: 20px;
+  }
+}
+.faq .item .qBox::after {
+  content: "";
+  width: 20px;
+  height: 4px;
+  display: block;
+  background: #01A0E9;
+  position: absolute;
+  top: 62px;
+  left: 50px;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .faq .item .qBox::after {
+    top: 34px;
+    left: 20px;
+  }
+}
+.faq .item .aBox {
+  display: none;
+  font-size: 1.125rem;
+  color: #fff;
+  line-height: 1.2;
+  opacity: 0.7;
+  padding: 0px 40px 40px 130px;
+}
+@media screen and (max-width: 1000px) {
+  .faq .item .aBox {
+    padding: 0px 20px 30px 60px;
+    font-size: 1rem;
+  }
+}
+.faq .item.active {
+  background: #13315F;
+  border-color: #E70016;
+}
+.faq .item.active .qBox {
+  color: #FFF;
+}
+.faq .item.active .qBox::after {
+  transform: rotate(0);
+}/*# sourceMappingURL=faq.css.map */

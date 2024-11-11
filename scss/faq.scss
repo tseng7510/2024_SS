@@ -1,0 +1,102 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.faq {
+  .listBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .item {
+    background: transparent;
+    border: #DCDDDD 2px solid;
+    @include transition(all, 0.3);
+
+    .qBox {
+      color: #111111;
+      font-size: Rem(24);
+      font-weight: 500;
+      padding: 40px 40px 40px 130px;
+      line-height: 1.65;
+      text-align: left;
+      display: block;
+      background: none;
+      position: relative;
+      @include transition(all, 0.3);
+
+      @include screen('tablet') {
+        padding: 20px 20px 20px 60px;
+        font-size: Rem(22);
+        line-height: 1.4;
+      }
+
+      @include screen('mobile') {
+        font-size: Rem(20);
+      }
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 4px;
+        display: block;
+        background: #01A0E9;
+        position: absolute;
+        top: 62px;
+        left: 50px;
+
+        @include screen('tablet') {
+          top: 34px;
+          left: 20px;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 4px;
+        display: block;
+        background: #01A0E9;
+        position: absolute;
+        top: 62px;
+        left: 50px;
+        transform: rotate(90deg);
+        @include transition(all, 0.3);
+
+        @include screen('tablet') {
+          top: 34px;
+          left: 20px;
+        }
+      }
+    }
+
+    .aBox {
+      display: none;
+      font-size: Rem(18);
+      color: #fff;
+      line-height: 1.2;
+      opacity: .7;
+      padding: 0px 40px 40px 130px;
+
+      @include screen('tablet') {
+        padding: 0px 20px 30px 60px;
+        font-size: Rem(16);
+      }
+    }
+
+
+
+    &.active {
+      background: #13315F;
+      border-color: #E70016;
+
+      .qBox {
+        color: #FFF;
+
+        &::after {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}

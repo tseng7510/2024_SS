@@ -1,0 +1,245 @@
+.application .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+}
+@media screen and (max-width: 767px) {
+  .application .listBox {
+    gap: 20px;
+  }
+}
+.application .listBox .item {
+  width: calc((100% - 34px) / 2);
+  position: relative;
+  min-height: 310px;
+}
+@media screen and (max-width: 767px) {
+  .application .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media screen and (max-width: 575px) {
+  .application .listBox .item {
+    width: 100%;
+  }
+}
+.application .listBox .item:nth-child(3n) {
+  width: 100%;
+}
+.application .listBox .item a,
+.application .listBox .item .picBox,
+.application .listBox .item .pic {
+  height: 100%;
+  overflow: hidden;
+}
+.application .listBox .item .pic img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 15s ease;
+}
+.application .listBox .item .title {
+  position: absolute;
+  color: #FFF;
+  display: block;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
+  padding: 20px;
+  font-size: 2.25rem;
+}
+@media screen and (max-width: 1000px) {
+  .application .listBox .item .title {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .application .listBox .item .title {
+    font-size: 1.125rem;
+  }
+}
+.application .listBox .item .title span {
+  display: inline-block;
+  padding: 10px;
+  background: #004080;
+}
+.application .listBox .item:hover img {
+  transform: scale(1.4);
+}
+
+.applicationDetailBox .mainBox {
+  padding-top: 0;
+}
+.applicationDetailBox .topBox {
+  position: relative;
+}
+.applicationDetailBox .topBox::before {
+  content: "";
+  isolation: isolate;
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  background: #040913;
+  opacity: 0.5;
+}
+
+.applicationDetail {
+  position: relative;
+  isolation: isolate;
+}
+.applicationDetail::before {
+  content: "";
+  position: absolute;
+  -webkit-mask: url("../images/index/oem_blue.svg") center no-repeat;
+          mask: url("../images/index/oem_blue.svg") center no-repeat;
+  background: #F7F7F7;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  width: 50vw;
+  height: 50vw;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  animation: scaleA 15s linear infinite;
+}
+@media screen and (max-width: 1000px) {
+  .applicationDetail::before {
+    width: 30vw;
+    height: 30vw;
+    right: -10%;
+    bottom: -10%;
+  }
+}
+@keyframes scaleA {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+.applicationDetail .container .box {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .container .box {
+    flex-direction: column;
+  }
+}
+.applicationDetail .container + .container {
+  margin-top: 6%;
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .container + .container {
+    margin-top: 50px;
+  }
+}
+.applicationDetail .container + .container .box {
+  border-top: #DCDDDD 2px solid;
+  padding-top: 4%;
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .container + .container .box {
+    padding-top: 30px;
+  }
+}
+.applicationDetail .container + .container .box .side .title {
+  font-weight: normal;
+  color: #13315F;
+  font-weight: 500;
+}
+.applicationDetail .side {
+  padding-right: 20px;
+  width: 320px;
+}
+@media screen and (max-width: 1000px) {
+  .applicationDetail .side {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .side {
+    width: 100%;
+  }
+}
+.applicationDetail .side .title {
+  font-size: 3.375rem;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1000px) {
+  .applicationDetail .side .title {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .side .title {
+    font-size: 2.125rem;
+    margin-bottom: 20px;
+  }
+}
+.applicationDetail .description {
+  width: calc(100% - 320px);
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.4;
+}
+@media screen and (max-width: 1000px) {
+  .applicationDetail .description {
+    width: calc(100% - 200px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .description {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+.applicationDetail .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+@media screen and (max-width: 1300px) {
+  .applicationDetail .listBox {
+    gap: 20px;
+  }
+}
+.applicationDetail .listBox .item {
+  width: calc((100% - 140px) / 3);
+}
+@media screen and (max-width: 600px) {
+  .applicationDetail .listBox .item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+.applicationDetail .listBox .pic {
+  padding: 20px;
+  margin-bottom: 20px;
+  aspect-ratio: 1;
+  background: radial-gradient(ellipse at center, rgb(255, 255, 255) 0%, rgb(226, 225, 230) 100%);
+}
+.applicationDetail .listBox .title {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .listBox .title {
+    font-size: 1.125rem;
+  }
+}
+.applicationDetail .listBox .txt {
+  color: #444444;
+  font-size: 1.125rem;
+  word-break: break-all;
+}
+@media screen and (max-width: 767px) {
+  .applicationDetail .listBox .txt {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=application.css.map */

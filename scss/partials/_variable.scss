@@ -1,0 +1,34 @@
+//-------------------------------------------------------------顏色---------//
+// 定義顏色 此顏色可自由變換
+$mainColor: #004080; //主色
+$secColor: #0099FF; //輔色
+$lightColor: #03CACF; //點綴
+$linkColor: #00ffff; //連結
+$importantColor: #e50012; //重要
+$mainFontColor: #08111f; //一般字的顏色
+$activeColor: #000;
+
+//-------------------------------------------------------------字型--------//
+
+// 字型設定
+$arial: Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$poppins: 'Poppins', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$barlow: 'Barlow', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$khula: 'Khula', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$anton: 'Anton', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$khula: 'Encode Sans Semi Condensed', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$opensans: 'Open Sans', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$titillium: 'Titillium Web', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$roboto: 'Roboto', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+$calibri: 'calibri', 'Noto Sans TC', Arial, '微軟正黑體', 'Microsoft JhengHei', '蘋果儷中黑', 'Apple LiGothic Medium', sans-serif, '0xe804';
+
+//-------------------------------------------------------------版面------//
+
+$mainFontSize: 16;
+
+$wrapperPaddingTop: 125px;
+$wrapperPaddingTopMobile: 50px;
+$headerTop: 45px;
+$contentPadding: 60px;
+$domWidth: 1440px;
+$innerPage: 1280px;

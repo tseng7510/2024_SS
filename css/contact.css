@@ -1,0 +1,144 @@
+.contact {
+  --padding: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .contact {
+    --padding: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    --padding: 30px;
+  }
+}
+.contact .pageContent {
+  padding-bottom: 0 !important;
+}
+.contact .pageContent .container {
+  margin-bottom: 5%;
+}
+.contact .content {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+.contact .infoBox {
+  flex: 1 1 38%;
+  background: #FFF;
+  border: #E5E5E5 1px solid;
+  padding: var(--padding) var(--padding);
+}
+@media screen and (max-width: 1000px) {
+  .contact .infoBox {
+    flex: 1 1 100%;
+    margin-bottom: 40px;
+  }
+}
+.contact .formBox {
+  flex: 1 1 62%;
+  background: #FFF;
+  border: #E5E5E5 1px solid;
+  padding: var(--padding) var(--padding);
+}
+@media screen and (max-width: 1000px) {
+  .contact .formBox {
+    flex: 1 1 100%;
+  }
+}
+.contact .title {
+  font-weight: bold;
+  font-size: 1.3125rem;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .title {
+    font-size: 1.25rem;
+  }
+}
+.contact .description {
+  margin-bottom: 30px;
+  color: #666666;
+  font-size: 1.125rem;
+}
+.contact .infoBox ul {
+  max-width: 380px;
+}
+.contact .infoBox ul li {
+  font-size: 1.125rem;
+}
+.contact .infoBox ul li + li {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .infoBox ul li + li {
+    margin-top: 20px;
+  }
+}
+.contact .infoBox ul li .label {
+  color: #01A0E9;
+  font-weight: bold;
+  width: 75px;
+  flex-shrink: 0;
+}
+.contact .formBox .info {
+  color: #111111;
+  font-size: 1.3125rem;
+  margin-bottom: 5%;
+  font-weight: 500;
+}
+@media screen and (max-width: 1000px) {
+  .contact .formBox .info {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .formBox .info {
+    font-size: 1rem;
+  }
+}
+.contact .pageBtnBox {
+  padding: 0;
+  border: none;
+}
+
+.okPage .mainBox {
+  padding: 10% 0;
+}
+.okPage .unitTitleBox .title {
+  text-align: center;
+}
+.okPage .unitTitleBox .title::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.okPage .subTitle {
+  text-align: center;
+  color: #279CF2;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .okPage .subTitle {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .okPage .subTitle {
+    font-size: 1.25rem;
+  }
+}
+.okPage .info {
+  text-align: center;
+  font-size: 1.125rem;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,408 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+//list
+.solutionsList {
+
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px;
+
+
+    .item {
+      width: calc((100% - (44px)) / 2);
+      @include transition(all, 0.3);
+
+      @include screen('mobile') {
+        width: 100%;
+      }
+
+      &:hover {
+
+        .pic::before,
+        .titleBox {
+          background: #13315F;
+        }
+      }
+    }
+  }
+
+  .pic {
+    margin: 0 20px 0 0;
+    position: relative;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: $secColor;
+      display: block;
+      inset: 20px -20px 0 20px;
+      z-index: -1;
+      @include transition(all, 0.3);
+    }
+  }
+
+  .titleBox {
+    background: $secColor;
+    @include transition(all, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0 0 20px 20px;
+    gap: 60px;
+
+    @include screen('tablet') {
+      margin: 0 0 10px 20px;
+      gap: 20px;
+    }
+
+    &::after {
+      content: '';
+      mask: url('../images/icon/icon_more.svg') center no-repeat;
+      background: #fff;
+      width: 24px;
+      height: 9px;
+      display: block;
+      flex-shrink: 0;
+      margin: 0 5px;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &::before {
+        content: '';
+        height: 28px;
+        width: 1px;
+        background: #E5E5E5;
+        position: absolute;
+        right: -30px;
+        display: block;
+
+        @include screen('tablet') {
+          right: -5px;
+        }
+      }
+
+      img {
+        filter: brightness(500);
+      }
+    }
+
+    .title {
+      color: #fff;
+      font-size: Rem(28);
+      font-weight: 500;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      flex-grow: 1;
+      @include transition(all, 0.3);
+
+      @include screen('tablet') {
+        font-size: Rem(22);
+      }
+
+      @include screen('mobile') {
+        font-size: Rem(20);
+      }
+    }
+  }
+
+
+  .description {
+    color: #666666;
+    font-size: Rem(16);
+    line-height: 1.4;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin: 0 0 0 20px;
+    @include transition(all, 0.3);
+  }
+}
+
+.solutionsDetail {
+
+  .topBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: #E5E5E5 1px solid;
+    background: #FFF;
+    padding: 50px 50px 50px 0;
+    margin: 0 0 0 20px;
+
+    @include screen('mobile') {
+      padding: 0px;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .pic {
+      width: 50%;
+      position: relative;
+      margin: 0 0 0 -20px;
+      box-shadow: 10px 10px 7px 0 rgba(0, 0, 0, 0.1);
+
+      @include screen('mobile') {
+        width: 100%;
+        margin: 0px;
+      }
+    }
+  }
+
+  .info {
+    width: 50%;
+    max-width: 570px;
+    position: relative;
+    border-width: 1px 1px 1px 0;
+    margin-left: 5%;
+
+    @include screen('tablet') {
+      max-width: none;
+      border-width: 1px;
+    }
+
+    @include screen('mobile') {
+      width: 100%;
+      padding: 20px;
+      max-width: none;
+      margin: 0;
+    }
+  }
+
+  .changePage {
+    border: #E5E5E5 1px solid;
+    border-width: 0px 1px 1px;
+    background: #FFF;
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    gap: 60px;
+    margin: 0 0 30px 20px;
+
+    @include screen('tablet') {
+      gap: 30px;
+    }
+
+    @include screen('mobile') {
+      padding: 20px;
+      margin: 0 0 30px 0px;
+    }
+
+    .arrows {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      line-height: 0;
+      font-weight: 500;
+      color: $secColor;
+      flex-shrink: 0;
+      @include transition(all, 0.3);
+
+      span {
+        @include screen('tablet') {
+          display: none;
+        }
+      }
+
+      i {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          width: 44px;
+          height: 44px;
+          flex-shrink: 0;
+          background: #F5F5F5;
+          border-radius: 100%;
+          display: block;
+          order: 3;
+
+          @include screen('tablet') {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &::after {
+          content: '';
+          mask: url('../images/icon/icon_more.svg') center no-repeat;
+          background: $secColor;
+          width: 24px;
+          height: 9px;
+          display: block;
+          order: 2;
+          transform: translateX(15px);
+          flex-shrink: 0;
+          @include transition(all, 0.3);
+
+          @include screen('tablet') {
+            width: 20px;
+            height: 9px;
+          }
+        }
+      }
+
+      &.prev {
+
+        @include screen('tablet') {
+          &::before {
+            content: 'PREV';
+          }
+        }
+
+        i {
+          transform: scaleX(-1);
+          order: -1;
+        }
+      }
+
+      &.next {
+        @include screen('tablet') {
+          &::after {
+            content: 'NEXT';
+            order: -1;
+          }
+        }
+
+        &::before {
+          content: '';
+          height: 28px;
+          width: 1px;
+          background: #E5E5E5;
+          position: absolute;
+          left: -30px;
+          display: block;
+
+          @include screen('tablet') {
+            left: -15px;
+          }
+        }
+      }
+
+      &:hover {
+        color: $mainColor;
+
+        i {
+          &::after {
+            background: $mainColor;
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: Rem(36);
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    @include screen('tablet') {
+      font-size: Rem(30);
+    }
+
+    @include screen('mobile') {
+      font-size: Rem(24);
+    }
+  }
+
+  .description {
+    font-size: Rem(16);
+    color: #666666;
+    line-height: 1.4;
+  }
+
+  .editor {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: Rem(18);
+    color: #666666;
+    line-height: 1.8;
+
+    @include screen('mobile') {
+      font-size: Rem(16);
+    }
+  }
+
+  .subTitle {
+    margin-top: 10%;
+    margin-bottom: 40px;
+    font-size: Rem(36);
+    font-weight: 500;
+    color: #06111F;
+    text-align: center;
+
+    @include screen('tablet') {
+      font-size: Rem(30);
+    }
+
+    @include screen('mobile') {
+      font-size: Rem(24);
+    }
+  }
+
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+
+  .item {
+    width: calc((100% - 20px * 3) / 4);
+
+    @include screen('tablet') {
+      width: calc((100% - 20px * 2) / 3);
+    }
+
+    @include screen('mobile') {
+      width: calc((100% - 20px) / 2);
+    }
+
+    .pic {
+      aspect-ratio: 1;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.1);
+
+      // img {
+      //   width: auto;
+      //   height: auto;
+      //   max-width: 100%;
+      // }
+    }
+
+    .title {
+      text-align: center;
+      font-size: Rem(21);
+      padding: 20px;
+      @include transition(all, 0.3);
+
+      @include screen('tablet') {
+        font-size: Rem(18);
+      }
+    }
+
+    &:hover {
+      .title {
+        background: $secColor;
+        color: #FFF;
+      }
+    }
+  }
+}
