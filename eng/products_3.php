@@ -50,9 +50,8 @@
                     </div>
                     <div class="outer">
                       <div class="item">
-                        <div class="subTitle">Non-Automotive</div>
                         <div class="inputBox">
-                          <input type="text" placeholder="Enter Size">
+                          <input type="text" placeholder="Enter Size or OEM Number">
                           <button type="button"></button>
                         </div>
                         <ul>
@@ -70,15 +69,6 @@
                               <li><button type="button">Type</button></li>
                             </ul>
                           </li>
-                        </ul>
-                      </div>
-                      <div class="item">
-                        <div class="subTitle">Automotive</div>
-                        <div class="inputBox">
-                          <input type="text" placeholder="Enter OEM Number">
-                          <button type="button"></button>
-                        </div>
-                        <ul>
                           <li><button type="button">Vehicles</button>
                             <ul>
                               <li><button type="button">Action Method</button></li>
@@ -105,9 +95,9 @@
                         <th>I.D</th>
                         <th>O.D</th>
                         <th>H</th>
-                        <th>Vehicles</th>
-                        <th>Vehicles</th>
-                        <th>Vehicles</th>
+                        <th>press</th>
+                        <th>speed</th>
+                        <th>vehicle</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -115,19 +105,7 @@
                         <tr>
                           <td><a href="products_detail.php">Scraper Seals</a></td>
                           <td>Reciprocating</td>
-                          <td>300*325*9</td>
-                          <td>338</td>
-                          <td>300</td>
-                          <td>325</td>
-                          <td>9</td>
-                          <td>B&W</td>
-                          <td>B&W</td>
-                          <td>B&W</td>
-                        </tr>
-                        <tr>
-                          <td><a href="products_detail.php">Scraper Seals</a></td>
-                          <td>Reciprocating</td>
-                          <td>300*325*9</td>
+                          <td><a href="products_detail.php">300*325*9</a></td>
                           <td>338</td>
                           <td>300</td>
                           <td>325</td>
