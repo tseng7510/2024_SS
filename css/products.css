@@ -187,13 +187,14 @@
   scrollbar-color: #0447f0 rgba(0, 0, 0, 0.2);
   scrollbar-width: thin;
   position: relative;
+  display: block !important;
 }
 @media screen and (max-width: 1000px) {
   .products3 aside .sideBox .contentBox {
     display: none;
   }
 }
-.products3 aside .sideBox .contentBox::before {
+/* .products3 aside .sideBox .contentBox::before {
   content: '';
   position: absolute;
   height: 1px;
@@ -202,7 +203,7 @@
   display: block;
   top: 0;
   background: #018af0;
-}
+} */
 .products3 aside .sideBox .contentBox .outer {
   padding: 20px;
 }
@@ -407,7 +408,7 @@
 }
 .products3 aside .searchBox {
   background: #004080;
-  padding: 20px;
+  /* padding: 20px; */
 }
 .products3 aside .searchBox p {
   margin: 0;

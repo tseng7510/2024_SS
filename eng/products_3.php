@@ -42,11 +42,6 @@
                   </div>
                   <form class="contentBox">
                     <div class="searchBox">
-                      <p>Search within category</p>
-                      <div class="inputBox">
-                        <input type="text" placeholder="Enter  keywords...">
-                        <button type="button"></button>
-                      </div>
                     </div>
                     <div class="outer">
                       <div class="item">
@@ -95,9 +90,9 @@
                         <th>I.D</th>
                         <th>O.D</th>
                         <th>H</th>
-                        <th>press</th>
-                        <th>speed</th>
-                        <th>vehicle</th>
+                        <th>Press</th>
+                        <th>Speed</th>
+                        <th>Vehicle</th>
                       </tr>
                     </thead>
                     <tbody>
